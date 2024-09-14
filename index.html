@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Super Mario Saves Binaries World</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="tela" id="tela">
+        <div class="div_logo" id="div_logo">
+          <img
+            class="logo"
+            src="assets/logo-super-mario-saves-binaries-world.png"
+            alt=""
+          />
+        </div>
+        <div class="container_frame" id="container_frame">
+          <div class="frame" id="frame">
+            <div class="container_dialogo" id="container_dialogo">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
+<script>
+    container_dialogo.innerHTML = `<div class="div_dialogo" id="div_dialogo">
+                <p class="dialogo" id="dialogo">
+                  No pacífico Reino dos Cogumelos, uma nova ameaça está prestes
+                  a desestabilizar a harmonia. Uma força misteriosa conhecida
+                  como a "Corrupção Binária" começou a transformar os números
+                  verdadeiros em números falsos, causando caos e confusão por
+                  toda parte. O mundo está se desintegrando em uma crise de
+                  cálculos, e somente um herói pode restaurar a ordem...
+                </p>
+                <div
+                  class="container_btn_novo_jogo"
+                  id="container_btn_novo_jogo"
+                >
+                  <button
+                    class="btn_novo_jogo"
+                    id="btn_novo_jogo"
+                    onclick="continuarHistoria()"
+                  >
+                    Continue ➡
+                  </button>
+                  `
+
+  function continuarHistoria() {
+    container_btn_novo_jogo.innerHTML = `
+    <button
+                    class="btn_novo_jogo"
+                    id="btn_novo_jogo"
+                    onclick="voltarHistoria()"
+                  >
+                    ⬅ Voltar
+                  </button>
+
+                  <button
+                    class="btn_novo_jogo"
+                    id="btn_novo_jogo"
+                    onclick="jogar()"
+                  >
+                    Jogar ➡
+                  </button>
+    `;
+
+    dialogo.innerHTML = `
+  Mario, o herói destemido do Reino dos Cogumelos, 
+  é chamado ao auxílio quando o seu amigo Toadsworth 
+  descobre que os valores decimais estão sendo corrompidos. 
+  As plataformas flutuantes, as moedas e até mesmo os 
+  inimigos estão sendo afetados por esses números corruptos. 
+  Mario deve embarcar em uma jornada épica para salvar seu 
+  mundo, dominando a arte dos números binários e restaurando a ordem.`;
+  }
+
+  function voltarHistoria() {
+    container_btn_novo_jogo.innerHTML = `
+                  <button
+                    class="btn_novo_jogo"
+                    id="btn_novo_jogo"
+                    onclick="continuarHistoria()"
+                  >
+                    Continue ➡
+                  </button>
+    `;
+
+    dialogo.innerHTML = `
+    No pacífico Reino dos Cogumelos, uma nova ameaça está prestes
+    a desestabilizar a harmonia. Uma força misteriosa conhecida
+    como a "Corrupção Binária" começou a transformar os números
+    verdadeiros em números falsos, causando caos e confusão por
+    toda parte. O mundo está se desintegrando em uma crise de
+    cálculos, e somente um herói pode restaurar a ordem...`;
+  }
+
+  function jogar() {
+    container_dialogo.innerHTML = ``
+  }
+</script>
