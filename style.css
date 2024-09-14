@@ -5,10 +5,8 @@
 
 body {
     background-color: black;
-    background-image: url(assets/bg-container.png);
-    background-size: cover;
+    background-image: url(assets/bg-loop.png);
     height: 99.6vh;
-    background-repeat: no-repeat;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
